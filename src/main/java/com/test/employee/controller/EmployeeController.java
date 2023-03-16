@@ -5,7 +5,9 @@ import com.test.employee.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins ="http://localhost:3001" )
+import java.util.List;
+
+@CrossOrigin(origins ="http://localhost:3000" )
 @RestController
 @RequestMapping("/api/v1/")
 
@@ -21,6 +23,14 @@ public class EmployeeController {
     @PostMapping("/employee")
     public Employee createEmployee(@RequestBody Employee employee){   //this returns the model object Employee(thats why the return type is Employee here)
         return employeeService.createEmployee(employee);
+    }
+
+    @GetMapping("/employee")
+    public List<Employee> getAllEmployees(){
+        //this method gets a list of allEmployees which are saved
+        return employeeService.getAllEmployees();
+
+
     }
 
 }
