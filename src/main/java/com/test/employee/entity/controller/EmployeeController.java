@@ -1,4 +1,4 @@
-package com.test.employee.controller;
+package com.test.employee.entity.controller;
 
 import com.test.employee.model.Employee;
 import com.test.employee.services.EmployeeService;
