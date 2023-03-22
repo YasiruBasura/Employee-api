@@ -1,6 +1,6 @@
 package com.test.employee.services;
 
-import com.test.employee.entity.EmployeeEntity;
+import com.test.employee.services.entity.EmployeeEntity;
 import com.test.employee.model.Employee;
 import com.test.employee.repository.EmployeeRepository;
 import org.springframework.beans.BeanUtils;
