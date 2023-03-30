@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Data
+@Data  //we take this from lombok as all the getters/setters are added to it
 @Table(name = "employee")
 public class EmployeeEntity {
 

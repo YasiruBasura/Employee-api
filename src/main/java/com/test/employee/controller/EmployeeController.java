@@ -15,17 +15,25 @@ import java.util.Map;
 @RequestMapping("/api/v1/")
 
 public class EmployeeController {
-
+//Here we have used @Autowired to inject dependencies.And within that we have created the constructor.
+    //tells Spring to inject an instance of EmployeeService into this constructor when creating a new
+    // instance of the EmployeeService class.
     private final EmployeeService employeeService;
+//    In the above example, private EmployeeService employeeService;
+//    is a declaration of a private field called employeeService of
+//    type EmployeeService in the Controller class. This field is used to
+//    hold a reference to an instance of the EmployeeService interface.
 
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
-    }
+    } //this is the constructor created by the @Autowired annotation
 
     //define a method/api to handle the post request of the data is below
     @PostMapping("/employee")
     public Employee createEmployee(@RequestBody Employee employee){   //this returns the model object Employee(thats why the return type is Employee here)
         return employeeService.createEmployee(employee);
+        //when you hit /api/v1/api/v1 this particular method will be called
+        //RequestBody gets all the Json data when a POST request is made and pass it as employee
     }
 
     @GetMapping("/employee")
@@ -43,7 +51,10 @@ public class EmployeeController {
         return ResponseEntity.ok(response);
     }
 
+
+
+
 }
 
 
-//why cant I push this thing??
+

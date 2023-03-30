@@ -9,19 +9,19 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@Service //we call this as the Service of this business layer
 public class EmployeeServiceImpl implements EmployeeService{
 
     private EmployeeRepository employeeRepository;    //object of the repositary
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
-    }
+    }       //constructor of the EmployeeRepositary object
 
     @Override
     public Employee createEmployee(Employee employee) {
         EmployeeEntity employeeEntity= new EmployeeEntity();
-        BeanUtils.copyProperties(employee, employeeEntity);
+        BeanUtils.copyProperties(employee, employeeEntity); //copy all the values from employee and pass to the employee entity
         employeeRepository.save(employeeEntity);        //save method already available in the employee repositary
         return employee;
     }
