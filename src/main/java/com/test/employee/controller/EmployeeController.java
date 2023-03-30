@@ -38,7 +38,7 @@ public class EmployeeController {
 
     @GetMapping("/employee")
     public List<Employee> getAllEmployees(){
-        //this method gets a list of allEmployees which are saved
+        //this methodcall gets a list of allEmployees which are saved
         return employeeService.getAllEmployees();
     }
 
