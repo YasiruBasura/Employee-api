@@ -32,7 +32,7 @@ public class EmployeeController {
     @PostMapping("/employee")
     public Employee createEmployee(@RequestBody Employee employee){   //this returns the model object Employee(thats why the return type is Employee here)
         return employeeService.createEmployee(employee);
-        //when you hit /api/v1/api/v1 this particular method will be called
+        //when you hit a post request /api/v1/employee this particular method will be called
         //RequestBody gets all the Json data when a POST request is made and pass it as employee
     }
 

@@ -30,7 +30,9 @@ public class EmployeeServiceImpl implements EmployeeService{
     public List<Employee> getAllEmployees() {
         List<EmployeeEntity> employeeEntities
                 =employeeRepository.findAll();    //getting all the data on employee repositary
+        //Below is,
         //converting the employee entity to the listofEmployee for the UI is below
+        //converting java object data(<EmployeeEntity>) to JSON data (<Employee>).
         List<Employee> employees=employeeEntities
                 .stream()
                 .map(emp->new Employee(  //used the map function to convert the employee entity to employee
