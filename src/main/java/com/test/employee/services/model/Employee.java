@@ -1,4 +1,4 @@
-package com.test.employee.model;
+package com.test.employee.services.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

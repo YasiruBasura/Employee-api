@@ -1,6 +1,6 @@
 package com.test.employee.services;
 
-import com.test.employee.model.Employee;
+import com.test.employee.services.model.Employee;
 
 import java.util.List;
 
